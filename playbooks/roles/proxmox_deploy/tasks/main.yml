@@ -41,11 +41,11 @@
       when: wait.changed == true 
       tags: provision
 
-    - name: Resize disk
-      shell: growpart "{{ default_volume }}" "{{ default_partition }}"; pvresize "{{ default_volume }}""{{ default_partition }}"
-      when: '"{{ VM_INCREASE_DISK }}" != "0"'
-      delegate_to: "{{ template_name }}"
-      tags: provision
+    # - name: Resize disk
+    #   shell: growpart "{{ default_volume }}" "{{ default_partition }}"; pvresize "{{ default_volume }}""{{ default_partition }}"
+    #   when: '"{{ VM_INCREASE_DISK }}" != "0"'
+    #   delegate_to: "{{ template_name }}"
+    #   tags: provision
 
     - name: stopping new Virtual Machine to change IPv4 configuration, it is necessary
       proxmox_kvm:

@@ -9,6 +9,10 @@ note:  I think I figured out a portion of the error.  The error occurs when I do
 
 I rebuilt the template using a netinst.iso and added growpart and pvresize.  It still has issues with resizing the disk.  It fails further in the process if you specify different size, but it still fails before assigning RAM, CPU, etc.
 
+Note:  I think I  figured it out.  The error occurs when I do not enter a new size for the HDD.  There is a different error if I do enter the size.  It cannot find growpart or pvresize.  Since the process is not completing, there is no way to access the cloud image to deterime what the problem is as it does not assign IP or any other function due to the failure.
+
+I rebuilt the template using a netinst.iso and added growpart and pvresize.  It still has issues with resizing the disk.  It fails furtheri n the process if you specify a different size, but it still fails before assigning RAM, CPU, etc.
+
 antimidas@u23-desktop:~/vscode/ansibleproxmox$ ansible-playbook -i hosts.ini playbooks/proxmox_deploy.yml 
 Node Password: 
 VM name: 231113

@@ -1,8 +1,8 @@
 ---
 # defaults file for proxmox_deploy
-VM_template: mantic-server-cloudimg-amd64
+VM_template: debian-template
 default_disk: virtio0
 default_interface: ens18
-default_volume: /dev/vda
+default_volume: /dev/sda
 default_partition: 2
-template_name: template-debian-deployment
+template_name: proxmox

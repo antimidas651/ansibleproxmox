@@ -1,0 +1,9 @@
+# vars file for proxmox_deploy
+vlan10:
+  params:
+    netmask: 24
+    vmbr: 0
+    gateway: 192.168.50.1
+    dnsservers: "192.168.50.253"
+    searchdomain: antimidas.net
+    

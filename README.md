@@ -3,7 +3,7 @@ Ansible configuration for rapid deployment of Linux VMs to Proxmox
 
 This code was borrowed from https://vectops.com/2020/01/provision-proxmox-vms-with-ansible-quick-and-easy/
 
-I have an error about too many parameters being passed, but I am not exactly sure how that is being caused.  Output of command execution is below.
+I have an error about too many parameters being passed, but I am not exactly sure how that is being caused.  Output of command execution is below.  It is creating the VM.  It jsut does not appear to be turning it on.
 
 antimidas@u23-desktop:~/vscode/ansibleproxmox$ ansible-playbook -i hosts.ini playbooks/proxmox_deploy.yml 
 Node Password: 

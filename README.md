@@ -3,11 +3,7 @@ Ansible configuration for rapid deployment of Linux VMs to Proxmox
 
 This code was borrowed from https://vectops.com/2020/01/provision-proxmox-vms-with-ansible-quick-and-easy/
 
-I have an error about too many parameters being passed, but I am not exactly sure how that is being caused.  Output of command execution is below.  It is creating the VM.  It just does not appear to be turning it on.
-
-note:  I think I figured out a portion of the error.  The error occurs when I do not enter a new size for the HDD.  There is a different error if I do enter the size.  It cannot find growpart or pvresize.  Since the process is not completing, there is no way to access the cloud image to determine what the problem is as it does not assign IP or any other function due to the failure.
-
-I rebuilt the template using a netinst.iso and added growpart and pvresize.  It still has issues with resizing the disk.  It fails further in the process if you specify different size, but it still fails before assigning RAM, CPU, etc.
+I have an error about too many parameters being passed, but I am not exactly sure how that is being caused.  Output of command execution is below.  It is creating the VM.  It jsut does not appear to be turning it on.
 
 Note:  I think I  figured it out.  The error occurs when I do not enter a new size for the HDD.  There is a different error if I do enter the size.  It cannot find growpart or pvresize.  Since the process is not completing, there is no way to access the cloud image to deterime what the problem is as it does not assign IP or any other function due to the failure.
 
